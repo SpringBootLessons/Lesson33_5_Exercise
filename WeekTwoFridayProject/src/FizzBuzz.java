@@ -42,6 +42,9 @@ public class FizzBuzz {
 
                     System.out.println(lastNum);
                 }
+                else if(i%7 == 0){
+                    System.out.println(i + " - multiple of seven");
+                }
                 else {
                     System.out.println(i);
                 }
