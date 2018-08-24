@@ -15,6 +15,7 @@ public class FizzBuzz {
 
         firstLastDiff = Math.abs(firstNum-lastNum);
 
+        // If firstNum and lastNum are less than 10 digits apart, print this line
         if(firstLastDiff < 10) {
             System.out.println("This won't take long");
         }
@@ -22,26 +23,31 @@ public class FizzBuzz {
         for(int i=1; i<=100; i++){
             word = "";
 
+            // Multiple of 3, print "Fizz"
             if(i%3 == 0){
                 word += "Fizz";
             }
+            // Multiple of 5, print "Buzz"
             if(i%5 == 0) {
                 word += "Buzz";
             }
 
+            // Print word if not empty string, first or last num
             if(!word.equals("") && i != 1 && i != 100){
                 System.out.println(word);
             }
             else{
-
+                // If first num, print random num
                 if(i == 1){
 
                     System.out.println(firstNum);
                 }
+                // If last num, print random num
                 else if(i == 100){
 
                     System.out.println(lastNum);
                 }
+                // If multiple of 7, print text to indicate so
                 else if(i%7 == 0){
                     System.out.println(i + " - multiple of seven");
                 }
@@ -49,7 +55,7 @@ public class FizzBuzz {
                     System.out.println(i);
                 }
             }
-
+            // If firstNum = lastNum generated, print "Shazam"
             if(firstNum == lastNum){
                 System.out.println("Shazam!!");
             }
