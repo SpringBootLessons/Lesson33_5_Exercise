@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Form</title>
+</head>
+<body>
+<form action="/sendTemplatedEmail" enctype="multipart/form-data" method="post">
+    <div>
+        <strong>Subject: </strong>
+        <input type="text" th:text="${subject}" name="subject"/>
+    </div>
+    <div>
+        <strong>Name: </strong>
+        <input type="text" th:text="${name}" name="name"/>
+    </div>
+    <div>
+        <strong>Message: </strong>
+        <input type="text" th:text="${body}" name="body"/>
+    </div>
+    <div>
+        <strong>Upload Image: </strong>
+        <input class="form-control-file" type="file" name="file"/>
+    </div>
+    <button type="submit">Send templated email</button>
+</form>
+</body>
+</html>
